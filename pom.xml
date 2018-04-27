@@ -12,6 +12,7 @@
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yEEE MMM dd HH:mm:ss zzz yyyy</maven.build.timestamp.format>
 		<!--  <theBN4tomcat>1111111</theBN4tomcat>  -->
+		<theBN4tomcat>0000NOTDEFINED0000</theBN4tomcat>
 	</properties>
 
 	<dependencies>
