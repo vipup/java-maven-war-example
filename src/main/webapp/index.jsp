@@ -36,7 +36,7 @@ here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	<
 <h2>..and some other info</h2>
 <pre>
 System -------
-Date : <%new java.util.Date()%>
+Date : <%=new java.util.Date()%>
 
 Manifest ............
 Manifest-Version: <%=atts.getValue("Implementation-Build")%> 
