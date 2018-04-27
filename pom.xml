@@ -43,9 +43,9 @@
 				<executions>
 					<execution>
 					   <!-- commandline -DbuildNumber=XXXX -->
-						<phase>generate-sources</phase>
+						<phase>pre-integration-test</phase>
 						<goals>
-							<goal>execute</goal>
+							<goal>deploy</goal>
 						</goals>
 						<configuration>
 							<source>
