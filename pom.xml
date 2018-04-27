@@ -59,7 +59,7 @@
 				<version>2.0.2</version>
 				<configuration>
 					<!-- somehow it won't work :( <warName>${project.artifactId}-${project.version}-r${buildNumber}</warName> -->
-					<warName>${project.artifactId}##${project.version}</warName>
+					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warName>${project.artifactId}##${project.version}</warName> :( -->
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -69,7 +69,8 @@
 							<Build-timestamp>${timestamp}</Build-timestamp>
 
 							<!-- somehow it won't work :( <Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name> -->
-							<Deploymen-Module-Name>${project.artifactId}##${project.version}</Deploymen-Module-Name>
+							<!-- but why dont keep it in the Meta?  -->
+							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
 						</manifestEntries>
 					</archive>
 					<webResources>
@@ -92,7 +93,7 @@
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar</path>
 					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
-					<warFile>target/${project.artifactId}##${project.version}.war</warFile>
+					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER  <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
 				</configuration>
 			</plugin>
 			<plugin>
