@@ -1,5 +1,4 @@
-<%@page import="java.util.Date"
-%><%@page import="java.util.jar.Attributes"
+<%@page import="java.util.jar.Attributes"
 %><%@page import="java.util.jar.Manifest"%><!DOCTYPE html><html><meta http-equiv="refresh" content="3" >
 <style type="text/css">
 h1 {
