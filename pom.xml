@@ -43,9 +43,9 @@
 				<executions>
 					<execution>
 					   <!-- commandline -DbuildNumber=XXXX -->
-						<phase>validate</phase>
+						<phase>initialize</phase>
 						<goals>
-							<goal>create</goal>
+							<goal>execute</goal>
 						</goals>
 						<configuration>
 							<source>
@@ -64,7 +64,7 @@
 					<execution>
 						<phase>validate</phase>
 						<goals>
-							<goal>create</goal>
+							<goal>execute</goal>
 						</goals>
 					</execution>
 				</executions>
