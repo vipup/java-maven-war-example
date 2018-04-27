@@ -48,6 +48,7 @@
 					<shortRevisionLength>5</shortRevisionLength>
 					<!--make it available for jar/war classpath resource -->
 					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
+					
 				</configuration>
 			</plugin>
 			<plugin>
@@ -75,6 +76,7 @@
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar</path>
+					<warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile>
 				</configuration>
 			</plugin>
 			<plugin>
