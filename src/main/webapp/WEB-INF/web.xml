@@ -9,7 +9,7 @@
 		<param-value>${buildNumber}</param-value>
 	</context-param>
 
-	
+	<version>1.0.1.hardcoded</version>
 	<servlet>
 		<servlet-name>fatherServlet</servlet-name>
 		<servlet-class>hello.world.FatherServlet</servlet-class>
