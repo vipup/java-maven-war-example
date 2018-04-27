@@ -10,7 +10,7 @@
 	<properties>
 		<servlet-api-version>3.0.1</servlet-api-version>
 		<timestamp>${maven.build.timestamp}</timestamp>
-		<maven.build.timestamp.format>yyyy-MM-dd'T'HH:mm:ss'Z'</maven.build.timestamp.format>
+		<maven.build.timestamp.format>yEEE MMM dd HH:mm:ss zzz yyyy</maven.build.timestamp.format>
 	</properties>
 
 	<dependencies>
