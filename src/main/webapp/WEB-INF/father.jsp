@@ -4,6 +4,6 @@
         <title>SO question 2595687</title>
     </head>
     <body>
-        <p>${father2.count}
+        <a href="https://stackoverflow.com/questions/2595687/static-fields-in-jsp-declaration">Q:</a><p>${father2.count}
     </body>
 </html>
