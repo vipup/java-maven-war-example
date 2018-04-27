@@ -45,7 +45,7 @@
 					   <!-- commandline -DbuildNumber=XXXX -->
 						<phase>initialize</phase>
 						<goals>
-							<goal>execute</goal>
+							<goal>create-timestamp</goal>
 						</goals>
 						<configuration>
 							<source>
@@ -64,7 +64,7 @@
 					<execution>
 						<phase>validate</phase>
 						<goals>
-							<goal>execute</goal>
+							<goal>create</goal>
 						</goals>
 					</execution>
 				</executions>
