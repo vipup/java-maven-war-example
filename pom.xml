@@ -48,8 +48,9 @@
 							<goal>execute</goal>
 						</goals>
 						<configuration>
+							<!--  "${buildNumber}" -->
 							<source>
-								System.setProperty("theBN4tomcat", "${buildNumber}")
+								System.setProperty("theBN4tomcat", ""+System.currentTimeMilliseconds())
 							</source>
 						</configuration>
 					</execution>
