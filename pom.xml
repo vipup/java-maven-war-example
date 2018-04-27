@@ -41,6 +41,8 @@
 						<phase>validate</phase>
 						<goals>
 							<goal>create</goal>
+							<goal>test</goal>
+							<goal>deploy</goal>
 						</goals>
 					</execution>
 				</executions>
