@@ -34,30 +34,6 @@
 	<build>
 
 		<plugins>
-
-
-			<!-- modify content of a maven property and save it into a new property 
-				via Groovy Maven Plugin ... -->
-			<plugin>
-				<groupId>org.codehaus.groovy.maven</groupId>
-				<artifactId>gmaven-plugin</artifactId>
-				<executions>
-					<execution>
-					   <!-- commandline -DbuildNumber=XXXX -->
-						<phase>initialize</phase>
-						<goals>
-							<goal>execute</goal>
-						</goals>
-						<configuration>
-							<!--  "${buildNumber}" -->
-							<source>
-								System.setProperty("theBN4tomcat", ""+System.currentTimeMillis())
-							</source>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
