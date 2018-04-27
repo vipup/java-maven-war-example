@@ -8,7 +8,7 @@
 		<param-name>buildNumber</param-name>
 		<param-value>${buildNumber}</param-value>
 	</context-param>
-	<!-- not working also??
+	<!-- not working also?? see https://stackoverflow.com/questions/6347326/web-app-version-in-tomcat-manager
 	<version>1.0.1.hardcoded</version>
 	-->
 	<servlet>
