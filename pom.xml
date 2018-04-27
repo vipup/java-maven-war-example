@@ -33,6 +33,28 @@
 	<build>
 
 		<plugins>
+
+
+			<!-- modify content of a maven property and save it into a new property 
+				via Groovy Maven Plugin ... -->
+			<plugin>
+				<groupId>org.codehaus.groovy.maven</groupId>
+				<artifactId>gmaven-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>create</goal>
+						</goals>
+						<configuration>
+							<source>
+								System.setProperty("theBN4tomcat", "${buildNumber}")
+							</source>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>buildnumber-maven-plugin</artifactId>
@@ -60,7 +82,8 @@
 				<version>2.0.2</version>
 				<configuration>
 					<!-- somehow it won't work :( <warName>${project.artifactId}-${project.version}-r${buildNumber}</warName> -->
-					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warName>${project.artifactId}##${project.version}</warName> :( -->
+					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warName>${project.artifactId}##${project.version}</warName> 
+						:( -->
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -70,7 +93,7 @@
 							<Build-timestamp>${timestamp}</Build-timestamp>
 
 							<!-- somehow it won't work :( <Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name> -->
-							<!-- but why dont keep it in the Meta?  -->
+							<!-- but why dont keep it in the Meta? -->
 							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
 						</manifestEntries>
 					</archive>
@@ -94,7 +117,7 @@
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar##${theBN4tomcat}</path>
 					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
-					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER  <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
+					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
 				</configuration>
 			</plugin>
 			<plugin>
