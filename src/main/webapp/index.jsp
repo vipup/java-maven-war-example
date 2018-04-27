@@ -33,6 +33,22 @@ body {
 %>
 <h1>Hello!</h1> 
 here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	</b>
+<h2>..and some other info</h2>
+<pre>
+System -------
+Date : <%new java.util.Date()%>
+
+Manifest ............
+Manifest-Version: <%=atts.getValue("Implementation-Build")%> 
+Archiver-Version: <%=atts.getValue("Archiver-Version")%>
+Created-By: <%=atts.getValue("Created-By")%>
+Built-By: <%=atts.getValue("Built-By")%>
+Build-Jdk: <%=atts.getValue("Build-Jdk")%>
+Implementation-Title: <%=atts.getValue("Implementation-Title")%>
+Implementation-Version: <%=atts.getValue("Implementation-Version")%>
+Implementation-Vendor-Id: <%=atts.getValue("Implementation-Vendor-Id")%>
+Implementation-Build: <%=atts.getValue("Implementation-Build")%>
+ </pre>
 <div class="element">
  Now is <%= new Date()%>...
  </div>

@@ -5,7 +5,7 @@
 
 	<groupId>hello-world</groupId>
 	<artifactId>hello-world</artifactId>
-	<version>1.0</version>
+	<version>1.0.1</version>
 	<packaging>war</packaging>
 	<properties>
 		<servlet-api-version>3.0.1</servlet-api-version>
@@ -28,6 +28,7 @@
 	</scm>
 
 	<build>
+		<finalName>${project.artifactId}-${project.version}-r${buildNumber}</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -60,6 +61,7 @@
 						</manifest>
 						<manifestEntries>
 							<Implementation-Build>${buildNumber}</Implementation-Build>
+							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
 						</manifestEntries>
 					</archive>
 				</configuration>
