@@ -66,10 +66,19 @@
 						<manifestEntries>
 							<Implementation-Build>${buildNumber}</Implementation-Build>
 							<Build-timestamp>${timestamp}</Build-timestamp>
-							
+
 							<!-- somehow it won't work :( <Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name> -->
 						</manifestEntries>
 					</archive>
+					<webResources>
+						<resource>
+							<directory>WEB-INF</directory>
+							<filtering>true</filtering>
+							<excludes>
+								<exclude>**/properties</exclude>
+							</excludes>
+						</resource>
+					</webResources>
 				</configuration>
 			</plugin>
 			<plugin>
