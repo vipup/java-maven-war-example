@@ -9,6 +9,8 @@
 	<packaging>war</packaging>
 	<properties>
 		<servlet-api-version>3.0.1</servlet-api-version>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 	</properties>
 
 	<dependencies>
@@ -28,7 +30,7 @@
 	</scm>
 
 	<build>
-		
+
 		<plugins>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -48,7 +50,7 @@
 					<shortRevisionLength>5</shortRevisionLength>
 					<!--make it available for jar/war classpath resource -->
 					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
-					
+
 				</configuration>
 			</plugin>
 			<plugin>
@@ -56,18 +58,16 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
-					<!-- somehow it won't work :(
-					<warName>${project.artifactId}-${project.version}-r${buildNumber}</warName>
-					-->
+					<!-- somehow it won't work :( <warName>${project.artifactId}-${project.version}-r${buildNumber}</warName> -->
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 						</manifest>
 						<manifestEntries>
 							<Implementation-Build>${buildNumber}</Implementation-Build>
-							<!-- somehow it won't work :(
-							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
-							-->
+							<Build-timestamp>${timestamp}</Build-timestamp>
+							
+							<!-- somehow it won't work :( <Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name> -->
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -80,9 +80,7 @@
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar</path>
-					<!-- somehow it won't work :( 
-					<warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile>
-					 -->
+					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
 				</configuration>
 			</plugin>
 			<plugin>

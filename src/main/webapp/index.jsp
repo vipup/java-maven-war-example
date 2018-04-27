@@ -48,6 +48,8 @@ Implementation-Title: <%=atts.getValue("Implementation-Title")%>
 Implementation-Version: <%=atts.getValue("Implementation-Version")%>
 Implementation-Vendor-Id: <%=atts.getValue("Implementation-Vendor-Id")%>
 Implementation-Build: <%=atts.getValue("Implementation-Build")%>
+Build-timestamp: <%=atts.getValue("Build-timestamp")%>
+
  </pre>
 <div class="element">
  Now is <%= new Date()%>...
