@@ -56,14 +56,18 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
+					<!-- somehow it won't work :(
 					<warName>${project.artifactId}-${project.version}-r${buildNumber}</warName>
+					-->
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
 						</manifest>
 						<manifestEntries>
 							<Implementation-Build>${buildNumber}</Implementation-Build>
+							<!-- somehow it won't work :(
 							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
+							-->
 						</manifestEntries>
 					</archive>
 				</configuration>
@@ -76,7 +80,9 @@
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar</path>
+					<!-- somehow it won't work :( 
 					<warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile>
+					 -->
 				</configuration>
 			</plugin>
 			<plugin>
