@@ -86,6 +86,7 @@
 						</resource>
 					</webResources>
 					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<!--  https://stackoverflow.com/questions/15355708/how-to-replace-a-value-in-web-xml-with-a-maven-property -->
 					<webXml>src/main/webapp/WEB-INF/web.xml</webXml> 
 				</configuration>
 			</plugin>
