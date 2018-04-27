@@ -42,9 +42,9 @@
 				<artifactId>gmaven-plugin</artifactId>
 				<executions>
 					<execution>
-						<phase>validate</phase>
+						<phase>generate-sources</phase>
 						<goals>
-							<goal>create</goal>
+							<goal>execute</goal>
 						</goals>
 						<configuration>
 							<source>
