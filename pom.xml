@@ -91,7 +91,7 @@
 				<configuration>
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
-					<path>/thisIsMinimalJspHelloWar</path>
+					<path>/thisIsMinimalJspHelloWar##2</path>
 					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
 					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER  <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
 				</configuration>
