@@ -8,8 +8,9 @@
 		<param-name>buildNumber</param-name>
 		<param-value>${buildNumber}</param-value>
 	</context-param>
-
+	<!-- not working also??
 	<version>1.0.1.hardcoded</version>
+	-->
 	<servlet>
 		<servlet-name>fatherServlet</servlet-name>
 		<servlet-class>hello.world.FatherServlet</servlet-class>
