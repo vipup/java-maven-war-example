@@ -59,6 +59,7 @@
 				<version>2.0.2</version>
 				<configuration>
 					<!-- somehow it won't work :( <warName>${project.artifactId}-${project.version}-r${buildNumber}</warName> -->
+					<warName>${project.artifactId}-${project.version}-r${buildNumber}###${project.version}</warName>
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
