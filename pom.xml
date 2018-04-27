@@ -11,7 +11,8 @@
 		<servlet-api-version>3.0.1</servlet-api-version>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yEEE_MMM_dd_HH..mm..ss_zzz</maven.build.timestamp.format>
-		<!-- Tomcat deploy TIP: if you wish  - it is sill possible to redefine it over  commadline: -DtheBN4tomcat=12356456-->
+		<!-- Tomcat deploy TIP: if you wish - it is sill possible to redefine it 
+			over commadline: -DtheBN4tomcat=12356456 -->
 		<theBN4tomcat>${timestamp}</theBN4tomcat>
 	</properties>
 
@@ -52,7 +53,6 @@
 					<shortRevisionLength>8</shortRevisionLength>
 					<!--make it available for jar/war classpath resource -->
 					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
-					<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -78,13 +78,15 @@
 					</archive>
 					<webResources>
 						<resource>
-							<directory>src/main/webapp/WEB-INF</directory>
 							<filtering>true</filtering>
-							<excludes>
-								<exclude>**/properties</exclude>
-							</excludes>
+							<directory>src/main/webapp</directory>
+							<includes>
+								<include>**/web.xml</include>
+							</includes>
 						</resource>
 					</webResources>
+					<warSourceDirectory>src/main/webapp</warSourceDirectory>
+					<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
 				</configuration>
 			</plugin>
 			<plugin>
