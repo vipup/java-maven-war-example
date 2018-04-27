@@ -52,7 +52,7 @@
 					<shortRevisionLength>8</shortRevisionLength>
 					<!--make it available for jar/war classpath resource -->
 					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
-
+					<filteringDeploymentDescriptors>true</filteringDeploymentDescriptors>
 				</configuration>
 			</plugin>
 			<plugin>
