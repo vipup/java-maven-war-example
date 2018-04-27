@@ -11,6 +11,7 @@
 		<servlet-api-version>3.0.1</servlet-api-version>
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yEEE MMM dd HH:mm:ss zzz yyyy</maven.build.timestamp.format>
+		<theBN4tomcat>1111111</theBN4tomcat>
 	</properties>
 
 	<dependencies>
@@ -41,8 +42,6 @@
 						<phase>validate</phase>
 						<goals>
 							<goal>create</goal>
-							<goal>test</goal>
-							<goal>deploy</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -93,7 +92,7 @@
 				<configuration>
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
-					<path>/thisIsMinimalJspHelloWar##${buildNumber}</path>
+					<path>/thisIsMinimalJspHelloWar##${theBN4tomcat}</path>
 					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
 					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER  <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
 				</configuration>
