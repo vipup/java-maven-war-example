@@ -1,4 +1,6 @@
-<%@page import="java.util.Date"%><!DOCTYPE html><html><meta http-equiv="refresh" content="3">
+<%@page import="java.util.Date"
+%><%@page import="java.util.jar.Attributes"
+%><%@page import="java.util.jar.Manifest"%><!DOCTYPE html><html><meta http-equiv="refresh" content="3">
 <style type="text/css">
 h1 {
         color: DeepSkyBlue;
@@ -24,7 +26,13 @@ body {
 }
 </style> 
 <body>
+<% 
+	Manifest mf = new Manifest();
+	mf.read (  getServletContext().getResourceAsStream("/META-INF/MANIFEST.MF") );
+	Attributes atts = mf.getMainAttributes();
+%>
 <h1>Hello!</h1> 
+here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	</b>
 <div class="element">
  Now is <%= new Date()%>...
  </div>
