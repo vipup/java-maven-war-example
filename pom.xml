@@ -92,7 +92,7 @@
 					<server>${tomcat.principal}</server>
 					<path>/thisIsMinimalJspHelloWar</path>
 					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
-					<path>/${project.artifactId}##${project.version}</path>
+					<warFile>target/${project.artifactId}##${project.version}.war</warFile>
 				</configuration>
 			</plugin>
 			<plugin>
