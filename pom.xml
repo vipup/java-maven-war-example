@@ -19,14 +19,14 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
-    
-    <scm>
-        <connection>scm:git:https://github.com/vipup/java-maven-war-example.git</connection>
-        <developerConnection>scm:git:https://github.com/vipup/java-maven-war-example.git</developerConnection>
-        
-        <url>https://github.com/vipup/java-maven-war-example.git</url>
-    </scm>
-    
+
+	<scm>
+		<connection>scm:git:https://github.com/vipup/java-maven-war-example.git</connection>
+		<developerConnection>scm:git:https://github.com/vipup/java-maven-war-example.git</developerConnection>
+
+		<url>https://github.com/vipup/java-maven-war-example.git</url>
+	</scm>
+
 	<build>
 		<plugins>
 			<plugin>
@@ -45,6 +45,8 @@
 					<doCheck>true</doCheck>
 					<doUpdate>true</doUpdate>
 					<shortRevisionLength>5</shortRevisionLength>
+					<!--make it available for jar/war classpath resource -->
+					<addOutputDirectoryToResources>true</addOutputDirectoryToResources>
 				</configuration>
 			</plugin>
 			<plugin>
