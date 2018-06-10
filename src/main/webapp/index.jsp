@@ -1,4 +1,4 @@
-<%@page import="java.util.Date"
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%><%@page import="java.util.Date"
 %><%@page import="java.util.jar.Attributes"
 %><%@page import="java.util.jar.Manifest"%><!DOCTYPE html><html><meta http-equiv="refresh" content="3" >
 <style type="text/css">
@@ -38,7 +38,23 @@ here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	<
 System -------
 Date : <%=new java.util.Date()%>
 
-<c:out value="${systemProperties.myProperty}"/>
+<% request.setAttribute("systemProperties", java.lang.System.getProperties()); %>
+ <table>
+  <tr>
+   <th>Key</th>
+   <th>Value</th>
+  </tr>
+  <c:forEach var="entry" items="${systemProperties}">
+   <tr>
+    <td>
+     <c:out value="${entry.key}" />
+    </td>
+    <td>
+     <c:out value="${entry.value}" />
+    </td>
+   </tr>
+  </c:forEach>
+ </table>
 
 Manifest ............
 Manifest-Version: <%=atts.getValue("Implementation-Build")%> 
