@@ -38,6 +38,8 @@ here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	<
 System -------
 Date : <%=new java.util.Date()%>
 
+<c:out value="${systemProperties.myProperty}"/>
+
 Manifest ............
 Manifest-Version: <%=atts.getValue("Implementation-Build")%> 
 Archiver-Version: <%=atts.getValue("Archiver-Version")%>
