@@ -34,17 +34,9 @@ body {
 <h1>Hello!</h1> 
 here is  <b> Implementation-Build:: <%=atts.getValue("Implementation-Build")%>	</b>
 <h2>..and some other info</h2>
+
+<h3>Manifest</h3>
 <pre>
-System -------
-Date : <%=new java.util.Date()%>
-
-
- 
- 
-<%= java.lang.System.getProperties().toString().replaceAll(",","\n") %> 
-
-
-Manifest ............
 Manifest-Version: <%=atts.getValue("Implementation-Build")%> 
 Archiver-Version: <%=atts.getValue("Archiver-Version")%>
 Created-By: <%=atts.getValue("Created-By")%>
@@ -55,6 +47,15 @@ Implementation-Version: <%=atts.getValue("Implementation-Version")%>
 Implementation-Vendor-Id: <%=atts.getValue("Implementation-Vendor-Id")%>
 Implementation-Build: <%=atts.getValue("Implementation-Build")%>
 Build-timestamp: <%=atts.getValue("Build-timestamp")%>
+</pre>
+<h3>System</h3>
+<pre>
+Date : <%=new java.util.Date()%>
+
+ 
+ 
+<%= java.lang.System.getProperties().toString().replaceAll(", ",",\n") %> 
+
 
  </pre>
 <div class="element">
