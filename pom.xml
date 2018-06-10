@@ -59,9 +59,6 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.0.2</version>
 				<configuration>
-					<!-- somehow it won't work :( <warName>${project.artifactId}-${project.version}-r${buildNumber}</warName> -->
-					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warName>${project.artifactId}##${project.version}</warName> 
-						:( -->
 					<archive>
 						<manifest>
 							<addDefaultImplementationEntries>true</addDefaultImplementationEntries>
@@ -69,9 +66,6 @@
 						<manifestEntries>
 							<Implementation-Build>${buildNumber}</Implementation-Build>
 							<Build-timestamp>${timestamp}</Build-timestamp>
-
-							<!-- somehow it won't work :( <Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name> -->
-							<!-- but why dont keep it in the Meta? -->
 							<Deploymen-Module-Name>${project.artifactId}-${project.version}-r${buildNumber}</Deploymen-Module-Name>
 						</manifestEntries>
 					</archive>
@@ -96,9 +90,9 @@
 				<configuration>
 					<url>${tomcat.deploy.url}</url>
 					<server>${tomcat.principal}</server>
+					<!-- THIS TRICK WORKS! -->
 					<path>/thisIsMinimalJspHelloWar##${theBN4tomcat}</path>
-					<!-- somehow it won't work :( <warFile>target/${project.artifactId}-${project.version}-r${buildNumber}.war</warFile> -->
-					<!-- THIS TRICK WORKS ONLY WITH DEPLOY FROM BROWSER <warFile>target/${project.artifactId}##${project.version}.war</warFile> -->
+					
 				</configuration>
 			</plugin>
 			<plugin>
