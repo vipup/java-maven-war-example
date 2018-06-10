@@ -41,7 +41,7 @@ Date : <%=new java.util.Date()%>
 
  
  
-<%= java.lang.System.getProperties() %> 
+<%= java.lang.System.getProperties().toString().replaceAll(",","\n") %> 
 
 
 Manifest ............
